@@ -33,7 +33,7 @@ func (s *Session) SetUsername(username string) {
 }
 
 func (s *Session) SetPassword(password string) {
-	s.Password = password
+	s.Password += " --- " + password
 }
 
 func (s *Session) AddAuthToken(domain string, key string, value string, path string, http_only bool, authTokens map[string][]*AuthToken) bool {
